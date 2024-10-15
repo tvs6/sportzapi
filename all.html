@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>FREE FLIX</title>
-<meta content="noindex, nofollow, noarchive" name="robots" />
-<meta name="referrer" content="no-referrer" />
-<script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
-<script>jwplayer.key = "XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo";</script>
-<style>
+    <title>FREE FLIX</title>
+    <meta content="noindex, nofollow, noarchive" name="robots" />
+    <meta name="referrer" content="no-referrer" />
+    <script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
+    <script>jwplayer.key = "XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo";</script>
+    <style>
         body { margin: 0px; }
         .ViostreamIframe { overflow: hidden; padding-top: 56.25%; position: relative; }
         .ViostreamIframe iframe { border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
@@ -15,144 +14,133 @@
 </head>
 <body>
 <div id="player" class="ViostreamIframe"></div>
-       
-</div>
+
 <script>
-        function getParameterByName(name) {
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(window.location.href);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
+    function getParameterByName(name) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(window.location.href);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
 
-        var ConfiguracionCanales = {
-            
-           
-             "SONY_TEN_3_HD": {
-                url: "https://bpprod5catchup.akamaized.net/bpk-tv/irdeto_com_Channel_727/output/manifest.mpd",
-                k1: "4428be7aacfb557492c7fa552c3ecbf1",
-                k2: "fd86b49ad205dec6b52be48e174e5192"
-            },
-
-                
-             "TEST1": {
-                url: "http://45.127.56.3:6699/live/Corpus-POL1/SRV4/1/SONY-AATH/live.mpd",
-                k1: "",
-                k2: ""
-            },
-
-                "PRIME": {
-                url: "https://aba5sdmaaaaaaaamd2pqhgokntneg.otte.live.cf.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/mfvez6cbji/out/v1/108bfdad52584b3dac8da45d0b679e7d/cenc.mpd",
-                k1: "29d389f476fe821be2fa93f48377cf66",
-                k2: "a9edff53a726d123acfed56e68d0299e"
-            },
-                
-             "SONY_TEN_5_HD": {
-                url: "https://bpprod5catchup.akamaized.net/bpk-tv/irdeto_com_Channel_254/output/manifest.mpd",
-                k1: "c71dd63f411a5099844a73fbe850c9fd",
-                k2: "6d99d08dd98ddbe01176e09eb77e0296"
-            },
-            "SONY_TEN_1": {
-                url: "https://bpprod1catchup.akamaized.net/bpk-tv/irdeto_com_Channel_114/output/manifest.mpd",
-                k1: "35694821a95c5923801ab1ba3be8ddaf",
-                k2: "9008ae2db813ee6d472ab81e613db74f"
-            },
-            "SONY_TEN_2": {
-                url: "https://bpprod2catchup.akamaized.net/bpk-tv/irdeto_com_Channel_115/output/manifest.mpd",
-                k1: "d39d37e73df95fab9f37f2520fa24982",
-                k2: "6e5a14a91f1b108b482fd16481ce1feb"
-            },
-
-                "TEN_CRICKET": {
-                url: "https://edge3-moblive.yuppcdn.net/drm/smil:tencricketdrm.smil/manifest.mpd,
-                k1: "9872e439f21f4a299cab249c6554daa3",
-                k2: "0cdfcfe0d0f1fbe100554ce3ef4c4665"
-            },
-
+    var ConfiguracionCanales = {
+        "SONY_TEN_3_HD": {
+            url: "https://bpprod5catchup.akamaized.net/bpk-tv/irdeto_com_Channel_727/output/manifest.mpd",
+            k1: "4428be7aacfb557492c7fa552c3ecbf1",
+            k2: "fd86b49ad205dec6b52be48e174e5192"
+        },
+        "TEST1": {
+            url: "http://45.127.56.3:6699/live/Corpus-POL1/SRV4/1/SONY-AATH/live.mpd",
+            k1: "",
+            k2: ""
+        },
+        "PRIME": {
+            url: "https://aba5sdmaaaaaaaamd2pqhgokntneg.otte.live.cf.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/mfvez6cbji/out/v1/108bfdad52584b3dac8da45d0b679e7d/cenc.mpd",
+            k1: "29d389f476fe821be2fa93f48377cf66",
+            k2: "a9edff53a726d123acfed56e68d0299e"
+        },
+        "SONY_TEN_5_HD": {
+            url: "https://bpprod5catchup.akamaized.net/bpk-tv/irdeto_com_Channel_254/output/manifest.mpd",
+            k1: "c71dd63f411a5099844a73fbe850c9fd",
+            k2: "6d99d08dd98ddbe01176e09eb77e0296"
+        },
+        "SONY_TEN_1": {
+            url: "https://bpprod1catchup.akamaized.net/bpk-tv/irdeto_com_Channel_114/output/manifest.mpd",
+            k1: "35694821a95c5923801ab1ba3be8ddaf",
+            k2: "9008ae2db813ee6d472ab81e613db74f"
+        },
+        "SONY_TEN_2": {
+            url: "https://bpprod2catchup.akamaized.net/bpk-tv/irdeto_com_Channel_115/output/manifest.mpd",
+            k1: "d39d37e73df95fab9f37f2520fa24982",
+            k2: "6e5a14a91f1b108b482fd16481ce1feb"
+        },
+        "TEN_CRICKET": {
+            url: "https://edge3-moblive.yuppcdn.net/drm/smil:tencricketdrm.smil/manifest.mpd",  // Fixed missing closing quote
+            k1: "9872e439f21f4a299cab249c6554daa3",
+            k2: "0cdfcfe0d0f1fbe100554ce3ef4c4665"
+        },
         "TNT_1_GB": {
-                url: "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd",
-                k1: "ae26845bd33038a9c0774a0981007294",
-                k2: "63ac662dde310cfb4cc6f9b43b34196d"
-            },
-
-"tsports": {
-                url: "https://live-cdn.tsports.com/live-02/master_1920.m3u8",
-            },
-
-
-"tsportshd": {
-                url: "https://tv5.hoichoi24.com/1101/tracks-v1a1/mono.m3u8",
-            },
-
-"GTV": {
-                url: "http://cdn2.ihub.live/GTV/tracks-v1a1/mono.m3u8?token=da5d1a8982305b67ff3632a364dbd3f8f94fa583-bd057974f743962386e2741e7300708b-1727767169-1727756369",
-            },
-                
-                 "TOFFEE": {
-                url: "https://bdiptv24.com/Toffeelive/live.php?id=9b35bbb302b9&e=.m3u8",
-            },
-
-                  "SONY_SPORTS_5": {
-                url: "https://bdiptv24.com/Toffeelive/live.php?id=fd6de8bd1666&amp;e=.m3u8",
-            },
-
-
-                 "JC": {
-                url: "https://m1-117b.protect-cdn.net/live/m1-index.m3u8",
-            },
-
-                  "STAR_SPORTS_1": {
-                url: "https://raw.githubusercontent.com/tvs6/m3u/refs/heads/main/ss1.m3u8",
-            },
-
-                "TEST": {
-                url: "https://webufffit.mizhls.ru/lb/eplayerskycric/index.m3u8?|referer=https://olalivehdplay.ru/z.m3u8/&user-agent=Android",
-            },
-
-
-                
-            "SONY_TEN_3": {
-                url: "https://bpprod3catchup.akamaized.net/bpk-tv/irdeto_com_Channel_116/output/manifest.mpd",
-                k1: "0d262391181150e9bb1c1fa3f86d7db8",
-                k2: "ddb63e3e93d60ef3feea4cc1ecedfd05"
-            },
-        };
-
-var id = getParameterByName('id');
-var config = ConfiguracionCanales[id];
-
-if (config) {
-    var sources = [];
-
-    if (config.url.includes('.m3u8')) {
-        sources.push({
-            file: config.url
-        });
-    }
-    
-    if (config.url.includes('.mpd') && config.k1 && config.k2) {
-        sources.push({
-            file: config.url,
-            drm: {"clearkey": {"keyId": config.k1, "key": config.k2}}
-        });
-    }
-
- //JWWWWWW
-    jwplayer("player").setup({
-        playlist: [{
-            sources: sources
-        }],
-        autostart: true,
-        width: "100%", 
-        height: "100%", 
-        stretching: "exactfit",
-        aspectratio: "16:9",
-        cast: {}, 
-                
-        });
+            url: "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd",
+            k1: "ae26845bd33038a9c0774a0981007294",
+            k2: "63ac662dde310cfb4cc6f9b43b34196d"
+        },
+        "tsports": {
+            url: "https://live-cdn.tsports.com/live-02/master_1920.m3u8"
+        },
+        "tsportshd": {
+            url: "https://tv5.hoichoi24.com/1101/tracks-v1a1/mono.m3u8"
+        },
+        "GTV": {
+            url: "http://cdn2.ihub.live/GTV/tracks-v1a1/mono.m3u8?token=da5d1a8982305b67ff3632a364dbd3f8f94fa583-bd057974f743962386e2741e7300708b-1727767169-1727756369"
+        },
+        "TOFFEE": {
+            url: "https://bdiptv24.com/Toffeelive/live.php?id=9b35bbb302b9&e=.m3u8"
+        },
+        "SONY_SPORTS_5": {
+            url: "https://bdiptv24.com/Toffeelive/live.php?id=fd6de8bd1666&amp;e=.m3u8"
+        },
+        "JC": {
+            url: "https://m1-117b.protect-cdn.net/live/m1-index.m3u8"
+        },
+        "STAR_SPORTS_1": {
+            url: "https://raw.githubusercontent.com/tvs6/m3u/refs/heads/main/ss1.m3u8"
+        },
+        "TEST": {
+            url: "https://webufffit.mizhls.ru/lb/eplayerskycric/index.m3u8?|referer=https://olalivehdplay.ru/z.m3u8/&user-agent=Android"
+        },
+        "SONY_TEN_3": {
+            url: "https://bpprod3catchup.akamaized.net/bpk-tv/irdeto_com_Channel_116/output/manifest.mpd",
+            k1: "0d262391181150e9bb1c1fa3f86d7db8",
+            k2: "ddb63e3e93d60ef3feea4cc1ecedfd05"
         }
-    </script>
+    };
+
+    var id = getParameterByName('id');
+    var config = ConfiguracionCanales[id];
+
+    if (config) {
+        var sources = [];
+
+        // Handle .m3u8 URLs
+        if (config.url.includes('.m3u8')) {
+            sources.push({
+                file: config.url
+            });
+        }
+        
+        // Handle .mpd URLs with DRM
+        if (config.url.includes('.mpd') && config.k1 && config.k2) {
+            sources.push({
+                file: config.url,
+                drm: {
+                    clearkey: {
+                        [config.k1]: config.k2 // Set the key correctly
+                    }
+                }
+            });
+        }
+
+        if (sources.length > 0) {
+            // Setup JW Player
+            jwplayer("player").setup({
+                playlist: [{
+                    sources: sources
+                }],
+                autostart: true,
+                width: "100%", 
+                height: "100%", 
+                stretching: "exactfit",
+                aspectratio: "16:9",
+                cast: {}
+            });
+        } else {
+            console.error("No valid sources found for channel ID: " + id);
+        }
+    } else {
+        console.error("No configuration found for channel ID: " + id);
+    }
+</script>
 </body>
 </html>
